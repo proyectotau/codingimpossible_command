@@ -14,9 +14,9 @@ class CommandManager {
     private List<String> actionHistory;
 
     static CommandManager getInstance(){
-        if(instance != null)
-            return instance;
-        return new CommandManager();
+        if(instance == null)
+            instance = new CommandManager();
+        return instance;
     }
 
     private CommandManager() {
